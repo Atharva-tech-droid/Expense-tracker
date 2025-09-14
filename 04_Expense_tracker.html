@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background-color: #121212;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .container {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .box {
+        background-color: #2a2a2a;
+        border-radius: 5px;
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+        color: white;
+        padding: 40px;
+        text-align: center;
+    }
+
+    form {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    form input {
+        margin-right: 10px;
+        border: none;
+        border-radius: 3px;
+        padding-left: 5px;
+        background-color: #121212;
+        color: white;
+    }
+
+    form button {
+        background-color: rgb(108, 38, 174);
+        color: white;
+        padding: 10px 5px;
+        border: none;
+        border-radius: 3px;
+    }
+
+    .expenses ul {
+        margin: 10px 0px;
+    }
+
+    .expenses ul li {
+        background-color: #121212;
+        color: white;
+        padding: 10px 5px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-radius: 4px;
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+        margin-right: 40px;
+        margin-bottom: 10px;
+        padding-left: 20px;
+    }
+
+    .expenses li button {
+        background-color: rgb(215, 52, 23);
+        color: white;
+        padding: 10px 5px;
+        border: none;
+        border-radius: 3px;
+        width: 70px;
+        cursor: pointer;
+    }
+</style>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            <h1>Expense Tracker</h1>
+            <form id="expense-form">
+                <input type="text" placeholder="Expense name" id="expense-name" required>
+                <input type="number" placeholder="Amount" id="expense-amt" required>
+                <button>Add Expense</button>
+            </form>
+
+            <div class="expenses">
+                <h2>Expenses</h2>
+                <ul id="expense-list">
+
+                </ul>
+            </div>
+
+            <div id="total">
+                <h3>Total: $ <span id="total-amt">0.00</span></h3>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="04_app.js"></script>
+
+</html>
